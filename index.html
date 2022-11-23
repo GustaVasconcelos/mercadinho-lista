@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista SuperMercado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6d697deee8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+
+        <div id="Cadastro-produto">
+    
+            <header>
+                <h2>Lista de SuperMercado</h2>
+            </header>
+            <div class="lista-cadastro">
+                <input class='input-cadastro'type="text" placeholder="Nome do produto" id="nome_produto" >
+                <input class='input-cadastro'type="text" placeholder="Valor do produto" id="preco_produto" step="0.01" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')";>
+                <input class='input-cadastro'type="text" placeholder="Quantidade de produto" id="quantidade_produto" step="0"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')">
+                <input type="submit" id="enviar" value="Cadastrar">
+            </div>
+    
+        </div>
+        <div id="carrinho-produtos">
+            <header>
+                <h2>Carrinho</h2>
+            </header>
+            <div id="container-slider">
+
+                <button class="botoes cima"><i class="fa-solid fa-chevron-up"></i></button>
+                <div id="slider">
+                    <div class="lista-produtos">
+
+                    </div>
+                </div>
+                <button class="botoes baixo"><i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+            <div class="soma-produto">
+                <h4>Total: R$0,00</h1>
+                <button id="btn-limpar">Limpar</button>
+            </div>
+        </div>
+        
+    </div>
+
+
+</body>
+<script src="js/script.js">
+    
+</script>
+</html>
